@@ -45,3 +45,12 @@
   justify-content: flex-start;
   align-items: center;
 }
+
+.formContainer {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+}
