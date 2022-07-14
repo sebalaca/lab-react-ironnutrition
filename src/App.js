@@ -10,8 +10,10 @@ function App() {
 
   return (
     <div className="App">
-    <h1>Food List</h1>
-      {foodList.map( food => (<FoodBox key={Math.random()} foodProps={food}/>))}
+      <h1>Food List</h1>
+        <div className="foodListContainer">
+          {foodList.map( food => (<FoodBox key={Math.random()} foodProps={food}/>))}
+        </div>
     </div>
   );
 }

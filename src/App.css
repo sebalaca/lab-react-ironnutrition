@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.foodListContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
