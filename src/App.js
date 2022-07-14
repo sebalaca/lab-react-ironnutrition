@@ -9,9 +9,14 @@ function App() {
   const [foodList, setFoodList] = useState(foods);
   console.log(foodList)
 
+  const handleAddFood = (n, i, c, s) => {
+    const newFood = {name: n, image: i, calories: c, servings: s}
+    setFoodList([...foodList, newFood])
+  }
+
   return (
     <div className="App">
-      <AddFoodForm setFoodList={setFoodList} foodList={foodList}/>
+      <AddFoodForm handleAddFood={handleAddFood}/>
 
       <h1>Food List</h1>
         <div className="foodListContainer">

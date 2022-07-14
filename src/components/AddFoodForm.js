@@ -6,7 +6,7 @@ import { Divider, Input } from 'antd';
 import { useState } from 'react';
 
 // Iteration 4
-function AddFoodForm({setFoodList, foodList}) {
+function AddFoodForm({handleAddFood}) {
 
   //Genero State de cada input
   const [name, setName] = useState('')
@@ -17,8 +17,7 @@ function AddFoodForm({setFoodList, foodList}) {
   //maneja los datos del forms - TODOS
   const handleOnSubmit = (e) => {
     e.preventDefault()
-    const newFood = {name: name, image: image, calories: calories, servings: servings}
-    setFoodList([...foodList, newFood])
+    handleAddFood(name, image, calories, servings)
   }
 
 //Maneja los datos de cada input
